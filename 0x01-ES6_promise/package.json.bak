@@ -21,6 +21,5 @@
     "jest": "^24.9.0"
   },
   "author": "Okoyen Ebisine Precious",
-  "license": "ISC",
-  "type": "module"
+  "license": "ISC"
 }
