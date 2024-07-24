@@ -43,3 +43,6 @@ logs/
 
 # Obsidian Files
 .obsidian/
+
+# Node Modules
+node_modules/
