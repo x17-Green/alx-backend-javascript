@@ -44,3 +44,15 @@ const response = getResponseFromAPI();
 console.log(response instanceof Promise);
 
 ```
+
+### 1. Don't make a promise...if you know you can't keep it 
+- [1-promise.js](./1-promise.js)
+- Task: Using the prototype below, return a promise. The parameter is a boolean
+	- `getFullResponseFromAPI(success)`
+- Test Code: [1-main.js](./1-main.js)
+```
+import getFullResponseFromAPI from './1-promise';
+
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
+```
