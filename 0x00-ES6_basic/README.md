@@ -141,3 +141,41 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ╭─green@greenhouse 
     ╰─➤  
     ```
+
+### 3. Parameter defaults 
+- File: [`3-default-parameter.js`](./3-default-parameter.js)
+- Task:
+    - Condense the internals of the following function to 1 line - 
+        - Cannot change name of each function/variable. 
+        ```
+        export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
+        if (expansion1989 === undefined) {
+            expansion1989 = 89;
+        }
+
+        if (expansion2019 === undefined) {
+            expansion2019 = 19;
+        }
+        return initialNumber + expansion1989 + expansion2019;
+        }
+        ```
+        - *Hint: The key here to define default parameter values for the function parameters.*
+- Example Execution: ([`3-main.js`](./3-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 3-main.js 
+    import getSumOfHoods from './3-default-parameter.js';
+
+    console.log(getSumOfHoods(34));
+    console.log(getSumOfHoods(34, 3));
+    console.log(getSumOfHoods(34, 3, 4));%                                                                   
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 3-main.js 
+
+    142
+    56
+    41
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+    
