@@ -34,7 +34,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Tasks, Files & Description
 ### 0. Keep every promise you make and only make promises you can keep
-- [`0-promise.js`](./0-promise.js)
+- File: [`0-promise.js`](./0-promise.js)
 - Task: Return a Promise using this prototype `function getResponseFromAPI()`
 - Test Code: [0-main.js](./0-main.js)
 ```
@@ -46,7 +46,7 @@ console.log(response instanceof Promise);
 ```
 
 ### 1. Don't make a promise...if you know you can't keep it 
-- [`1-promise.js`](./1-promise.js)
+- File: [`1-promise.js`](./1-promise.js)
 - Task: Using the prototype below, return a promise. The parameter is a boolean
 	- `getFullResponseFromAPI(success)`
 - Test Code: [1-main.js](./1-main.js)
@@ -58,7 +58,7 @@ console.log(getFullResponseFromAPI(false));
 ```
 
 ### 2. Catch me if you can!
-- [`2-then.js`](./2-then.js)
+- File: [`2-then.js`](./2-then.js)
 - Task: Using the function prototype below
 	```
 	function handleResponseFromAPI(promise)
@@ -78,7 +78,7 @@ handleResponseFromAPI(promise);
 ```
 
 ### 3. Handle multiple successful promises 
-- [`3-all.js`](./3-all.js)
+- File: [`3-all.js`](./3-all.js)
 - Task: In this file, import `uploadPhoto` and `createUser` from `utils.js`
 	- Knowing that the functions in utils.js return promises
 	- Use the prototype below to collectively resolve all promises and log body firstName lastName to the console.
@@ -94,7 +94,7 @@ handleProfileSignup();
 ```
 
 ### 4. Simple promise
-- [`4-user-promise.js`](./4-user-promise.js)
+- File: [`4-user-promise.js`](./4-user-promise.js)
 - Task: Using the following prototype
 	```
 	function signUpUser(firstName, lastName) {
@@ -115,7 +115,7 @@ console.log(signUpUser("Bob", "Dylan"));
 ```
 
 ### 5. Reject the promises
-- [`5-photo-reject.js`](./5-photo-reject.js)
+- File: [`5-photo-reject.js`](./5-photo-reject.js)
 - Task: Write and export a function named `uploadPhoto`. 
 	- It should accept one argument `fileName` (string). 
 	- The function should return a Promise rejecting with an Error 
@@ -130,4 +130,32 @@ console.log(signUpUser("Bob", "Dylan"));
 import uploadPhoto from './5-photo-reject';
 
 console.log(uploadPhoto('green.jpg'));
+```
+
+### 6. Handle multiple promises
+- File: [`6-final-user.js`](./6-final-user.js)
+- Tasks:
+	- Import `signUpUser` from 4-`user-promise.js`
+	- Import `uploadPhoto` from 5`-photo-reject.js`
+		- Write and export a function named `handleProfileSignup`
+			- It should accept three arguments
+				- `firstName` (string)
+				- `lastName` (string)
+				- `fileName` (string)
+		- The function should call the two other functions
+		- When the promises are all settled it should return an array with the following structure:
+			```
+			[
+				{
+					status: status_of_the_promise,
+					value: value or error returned by the Promise
+				},
+				...
+			]
+			```
+- Test Code: [`6-main.js`](./6-main.js)
+```
+import handleProfileSignup from './6-final-user';
+
+console.log(handleProfileSignup("Bob", "Dylan", "bob_dylan.jpg"));
 ```
