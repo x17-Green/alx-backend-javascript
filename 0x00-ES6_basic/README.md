@@ -40,7 +40,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Tasks, Files & Description
 ### 0. Const or let? 
-- File: [0-constants.js](./0-constants.js)
+- File: [`0-constants.js`](./0-constants.js)
 - Task: Modify
     - function `taskFirst` to instantiate variables using `const`
     - function `taskNext` to instantiate variables using `let`
@@ -77,7 +77,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ```
 
 ### 1. Block Scope 
-- File: [1-block-scoped.js](./1-block-scoped.js)
+- File: [`1-block-scoped.js`](./1-block-scoped.js)
 - Task: Modify the variables inside the function `taskBlock`
     - So the variables aren’t overwritten inside the conditional block.
         ```
@@ -126,6 +126,18 @@ At the end of this project, you are expected to be able to [explain to anyone](h
         }
         ```
 - Example Execution: ([`2-main.js`](./2-main.js))
-```
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 2-main.js 
+    import getNeighborhoodsList from './2-arrow.js';
 
-```
+    const neighborhoodsList = new getNeighborhoodsList();
+    const res = neighborhoodsList.addNeighborhood('Noe Valley');
+    console.log(res);
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 2-main.js 
+
+    [ 'SOMA', 'Union Square', 'Noe Valley' ]
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
