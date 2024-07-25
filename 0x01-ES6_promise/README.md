@@ -34,7 +34,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Tasks, Files & Description
 ### 0. Keep every promise you make and only make promises you can keep
-- [0-promise.js](./0-promise.js)
+- [`0-promise.js`](./0-promise.js)
 - Task: Return a Promise using this prototype `function getResponseFromAPI()`
 - Test Code: [0-main.js](./0-main.js)
 ```
@@ -46,7 +46,7 @@ console.log(response instanceof Promise);
 ```
 
 ### 1. Don't make a promise...if you know you can't keep it 
-- [1-promise.js](./1-promise.js)
+- [`1-promise.js`](./1-promise.js)
 - Task: Using the prototype below, return a promise. The parameter is a boolean
 	- `getFullResponseFromAPI(success)`
 - Test Code: [1-main.js](./1-main.js)
@@ -55,4 +55,24 @@ import getFullResponseFromAPI from './1-promise';
 
 console.log(getFullResponseFromAPI(true));
 console.log(getFullResponseFromAPI(false));
+```
+
+### 2. Catch me if you can!
+- [`2-then.js`](./2-then.js)
+- Task: Using the function prototype below
+	```
+	function handleResponseFromAPI(promise)
+	```
+	Append three handlers to the function:
+	- When the Promise resolves, return an object with the following attributes
+		- `status`: `200`
+		- `body`: `success`
+	- When the Promise rejects, return an empty `Error` object
+	- For every resolution, log `Got a response from the API` to the console
+- Test Code: [`2-main.js`](./2-main.js)
+```
+import handleResponseFromAPI from "./2-then";
+
+const promise = Promise.resolve();
+handleResponseFromAPI(promise);
 ```
