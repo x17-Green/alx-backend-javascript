@@ -178,4 +178,36 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ╭─green@greenhouse 
     ╰─➤  
     ```
-    
+
+    ### 4. Rest parameter syntax for functions 
+    - File: [`4-rest-parameter.js`](./4-rest-parameter.js)
+    - Task:
+    - Create a function that takes an array of numbers
+        - It returns the sum of all the numbers in the array.
+            ```
+            export default function returnHowManyArguments() {
+
+            }
+            ```
+        - Example:
+            ```
+            > returnHowManyArguments("Hello", "Holberton", 2020);
+            3
+            >
+            ```
+    - Example Execution: ([`4-main.js`](./4-main.js))
+        ```
+        ╭─green@greenhouse 
+        ╰─➤  cat 4-main.js 
+        import returnHowManyArguments from './4-rest-parameter.js';
+
+        console.log(returnHowManyArguments("one"));
+        console.log(returnHowManyArguments("one", "two", 3, "4th"));
+        ╭─green@greenhouse 
+        ╰─➤  npm run dev 4-main.js
+
+        1
+        4
+        ╭─green@greenhouse 
+        ╰─➤  
+        ```
