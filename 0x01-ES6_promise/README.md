@@ -199,3 +199,25 @@ console.log(getFullResponseFromAPI(false));
 	test();
 
 	```
+
+### 8. Throw error / try catch
+- File: [`8-try.js`](./8-try.js)
+- Task: Write and export a function named `divideFunction`
+	- It should accept two arguments
+		- `numerator` (number)
+		- `denominator` (number)
+	- When the `denominator` argument is equal to 0
+		- Throw a new error with the message `cannot divide by 0`.
+	- Otherwise return the numerator divided by the denominator
+		```
+		export default function divideFunction(numerator, denominator) {
+
+		}
+		```
+- Test Code: [`8-main.js`](./8-main.js)
+	```
+	import divideFunction from './8-try';
+
+	console.log(divideFunction(10, 2));
+	console.log(divideFunction(10, 0));
+	```
