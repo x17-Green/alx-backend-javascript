@@ -3,8 +3,9 @@
 This project is about Promises in JavaScript
 
 ![meme](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/75862d67ca51a042003c.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240724%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240724T182711Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f2ba5d9f6eb7685cc24c8b2b05dac054ec05ceb0f869360ac807010174db679b)
+
 ## Resources
-Read or watch:
+**Read or watch**:
 * [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 * [JavaScript Promises: An Introduction](https://web.dev/articles/promises)
 * [Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
