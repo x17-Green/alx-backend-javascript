@@ -221,3 +221,26 @@ console.log(getFullResponseFromAPI(false));
 	console.log(divideFunction(10, 2));
 	console.log(divideFunction(10, 0));
 	```
+
+### 9. Throw an error 
+- File: [`9-try.js`](./9-try.js)
+- Task: Write and export a function named `guardrail`
+	- It should accept one argument
+		- `mathFunction` (Function)
+	- This function should create and return an array named `queue`.
+		> When the mathFunction function is executed, the value returned by the function should be appended to the queue. If this function throws an error, the error message should be appended to the queue. In every case, the message Guardrail was processed should be added to the queue. 
+	- Example
+		```
+		[
+			1000,
+			'Guardrail was processed',
+		]
+		```
+- Test Code: [`9-main.js`](./9-main.js)
+	```
+	import guardrail from './9-try';
+	import divideFunction from './8-try';
+
+	console.log(guardrail(() => { return divideFunction(10, 2)}));
+	console.log(guardrail(() => { return divideFunction(10, 0)}));
+	```
