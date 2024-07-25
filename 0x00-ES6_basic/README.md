@@ -46,22 +46,22 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     - function `taskNext` to instantiate variables using `let`
         ```
         export function taskFirst() {
-        var task = 'I prefer const when I can.';
-        return task;
+            var task = 'I prefer const when I can.';
+            return task;
         }
 
         export function getLast() {
-        return ' is okay';
+            return ' is okay';
         }
 
         export function taskNext() {
-        var combination = 'But sometimes let';
-        combination += getLast();
+            var combination = 'But sometimes let';
+            combination += getLast();
 
-        return combination;
+            return combination;
         }
         ```
-- Execution example:
+- Execution example: ([`0-main.js`](./0-main.js))
     ```
     ╭─green@greenhouse
     ╰─➤  cat 0-main.js 
@@ -94,3 +94,38 @@ At the end of this project, you are expected to be able to [explain to anyone](h
         }
         ```
 - Execution Example: ([`1-main.js`](./1-main.js))
+    ```
+    ╭─green@greenhouse
+    ╰─➤  cat 1-main.js 
+    import taskBlock from './1-block-scoped.js';
+
+    console.log(taskBlock(true));
+    console.log(taskBlock(false));%                                                                          
+    ╭─green@greenhouse
+    ╰─➤  npm run dev 1-main.js                                                      
+
+    [ false, true ]
+    [ false, true ]
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+### 2. Arrow functions 
+- File: [`2-arrow.js`](./2-arrow.js)
+- Task: Rewrite the following standard function 
+    - To use ES6’s arrow syntax of the function `add` (it will be an anonymous function after)
+        ```
+        export default function getNeighborhoodsList() {
+        this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+
+        const self = this;
+        this.addNeighborhood = function add(newNeighborhood) {
+            self.sanFranciscoNeighborhoods.push(newNeighborhood);
+            return self.sanFranciscoNeighborhoods;
+        };
+        }
+        ```
+- Example Execution: ([`2-main.js`](./2-main.js))
+```
+
+```
