@@ -76,3 +76,19 @@ import handleResponseFromAPI from "./2-then";
 const promise = Promise.resolve();
 handleResponseFromAPI(promise);
 ```
+
+### 3. Handle multiple successful promises 
+- [`3-all.js`](./3-all.js)
+- Task: In this file, import `uploadPhoto` and `createUser` from `utils.js`
+	- Knowing that the functions in utils.js return promises
+	- Use the prototype below to collectively resolve all promises and log body firstName lastName to the console.
+		```
+		function handleProfileSignup()
+		```
+	- In the event of an error, log `Signup system offline` to the console
+- Test Code: [`3-main.js`](./3-main.js)
+```
+import handleProfileSignup from "./3-all";
+
+handleProfileSignup();
+```
