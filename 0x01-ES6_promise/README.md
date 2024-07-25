@@ -70,12 +70,12 @@ console.log(getFullResponseFromAPI(false));
 	- When the Promise rejects, return an empty `Error` object
 	- For every resolution, log `Got a response from the API` to the console
 - Test Code: [`2-main.js`](./2-main.js)
-```
-import handleResponseFromAPI from "./2-then";
+	```
+	import handleResponseFromAPI from "./2-then";
 
-const promise = Promise.resolve();
-handleResponseFromAPI(promise);
-```
+	const promise = Promise.resolve();
+	handleResponseFromAPI(promise);
+	```
 
 ### 3. Handle multiple successful promises 
 - File: [`3-all.js`](./3-all.js)
@@ -87,11 +87,11 @@ handleResponseFromAPI(promise);
 		```
 	- In the event of an error, log `Signup system offline` to the console
 - Test Code: [`3-main.js`](./3-main.js)
-```
-import handleProfileSignup from "./3-all";
+	```
+	import handleProfileSignup from "./3-all";
 
-handleProfileSignup();
-```
+	handleProfileSignup();
+	```
 
 ### 4. Simple promise
 - File: [`4-user-promise.js`](./4-user-promise.js)
@@ -108,11 +108,11 @@ handleProfileSignup();
 		}
 		```
 - Test Code: [`4-main.js`](./4-main.js)
-```
-import signUpUser from "./4-user-promise";
+	```
+	import signUpUser from "./4-user-promise";
 
-console.log(signUpUser("Bob", "Dylan"));
-```
+	console.log(signUpUser("Bob", "Dylan"));
+	```
 
 ### 5. Reject the promises
 - File: [`5-photo-reject.js`](./5-photo-reject.js)
@@ -126,11 +126,11 @@ console.log(signUpUser("Bob", "Dylan"));
 		}
 		```
 - Test Code: [`5-main.js`](./5-main.js)
-```
-import uploadPhoto from './5-photo-reject';
+	```
+	import uploadPhoto from './5-photo-reject';
 
-console.log(uploadPhoto('green.jpg'));
-```
+	console.log(uploadPhoto('green.jpg'));
+	```
 
 ### 6. Handle multiple promises
 - File: [`6-final-user.js`](./6-final-user.js)
@@ -154,8 +154,48 @@ console.log(uploadPhoto('green.jpg'));
 			]
 			```
 - Test Code: [`6-main.js`](./6-main.js)
-```
-import handleProfileSignup from './6-final-user';
+	```
+	import handleProfileSignup from './6-final-user';
 
-console.log(handleProfileSignup("Bob", "Dylan", "bob_dylan.jpg"));
-```
+	console.log(handleProfileSignup("Bob", "Dylan", "bob_dylan.jpg"));
+	```
+
+### 7. Load balancer
+- File: [`7-load_balancer.js`](./7-load_balancer.js)
+- Task: Write and export a function named `loadBalancer`
+	- It should accept two arguments
+		- `chinaDownload` (Promise)
+		- `USDownload` (Promise)
+	- The function should return the value returned by the promise that resolved the first.
+		```
+		export default function loadBalancer(chinaDownload, USDownload) {
+			
+		}
+		```
+- Test Code: [`7-main.js`](./7-main.js)
+	```
+	import loadBalancer from "./7-load_balancer";
+
+	const ukSuccess = 'Downloading from UK is faster';
+	const frSuccess = 'Downloading from FR is faster';
+
+	const promiseUK = new Promise(function(resolve, reject) {
+		setTimeout(resolve, 100, ukSuccess);
+	});
+
+	const promiseUKSlow = new Promise(function(resolve, reject) {
+		setTimeout(resolve, 400, ukSuccess);
+	});
+
+	const promiseFR = new Promise(function(resolve, reject) {
+		setTimeout(resolve, 200, frSuccess);
+	});
+
+	const test = async () => {
+		console.log(await loadBalancer(promiseUK, promiseFR));
+		console.log(await loadBalancer(promiseUKSlow, promiseFR));
+	}
+
+	test();
+
+	```
