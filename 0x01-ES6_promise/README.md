@@ -92,3 +92,24 @@ import handleProfileSignup from "./3-all";
 
 handleProfileSignup();
 ```
+
+### 4. Simple promise
+- [`4-user-promise.js`](./4-user-promise.js)
+- Task: Using the following prototype
+	```
+	function signUpUser(firstName, lastName) {
+	}
+	```
+	- That returns a resolved promise with this object:
+		```
+		{
+		  firstName: value,
+		  lastName: value,
+		}
+		```
+- Test Code: [`4-main.js`](./4-main.js)
+```
+import signUpUser from "./4-user-promise";
+
+console.log(signUpUser("Bob", "Dylan"));
+```
