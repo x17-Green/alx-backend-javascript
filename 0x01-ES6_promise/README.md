@@ -114,7 +114,7 @@ import signUpUser from "./4-user-promise";
 console.log(signUpUser("Bob", "Dylan"));
 ```
 
-### Reject the promises
+### 5. Reject the promises
 - [`5-photo-reject.js`](./5-photo-reject.js)
 - Task: Write and export a function named `uploadPhoto`. 
 	- It should accept one argument `fileName` (string). 
