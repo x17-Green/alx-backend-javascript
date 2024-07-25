@@ -244,3 +244,36 @@ console.log(getFullResponseFromAPI(false));
 	console.log(guardrail(() => { return divideFunction(10, 2)}));
 	console.log(guardrail(() => { return divideFunction(10, 0)}));
 	```
+
+### 10. Await / Async
+- File: [`100-await.js`](./100-await.js)
+- Task: 
+  	- Import `uploadPhoto` and `createUser` from `utils.js`
+	- Write and export an async function named `asyncUploadUser`
+		- It should call imported functions and return an object
+		- **Format**
+			```
+			{
+				photo: response_from_uploadPhoto_function,
+				user: response_from_createUser_function,
+			}
+			```
+		- If one of the async function fails, return an empty object.
+		- **Example:**
+			```
+			{
+			photo: null,
+			user: null,
+			}
+			```
+- Test Code [`100-main.js`](./100-main.js)
+	```
+	import asyncUploadUser from "./100-await";
+
+	const test = async () => {
+		const value = await asyncUploadUser();
+		console.log(value);
+	};
+
+	test();
+	```
