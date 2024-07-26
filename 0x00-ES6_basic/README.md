@@ -471,28 +471,27 @@ console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctl
                 };
                 ```
 - Example Execution: ([`12-main.js`](./12-main.js))
-```
-╭─green@greenhouse
-╰─➤  cat 12-main.js 
-import createEmployeesObject from './11-createEmployeesObject.js';
-import createReportObject from './12-createReportObject.js';
+    ```
+    ╭─green@greenhouse
+    ╰─➤  cat 12-main.js 
+    import createEmployeesObject from './11-createEmployeesObject.js';
+    import createReportObject from './12-createReportObject.js';
 
-const employees = {
-    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-    ...createEmployeesObject('marketing', ['Sylvie'])
-};      
+    const employees = {
+        ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+        ...createEmployeesObject('marketing', ['Sylvie'])
+    };      
 
-const report = createReportObject(employees);
-console.log(report.allEmployees);
-console.log(report.getNumberOfDepartments(report.allEmployees));
-╭─green@greenhouse 
-╰─➤  npm run dev 12-main.js 
+    const report = createReportObject(employees);
+    console.log(report.allEmployees);
+    console.log(report.getNumberOfDepartments(report.allEmployees));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 12-main.js 
 
-> 0x01-es6_promise@1.0.0 dev
-> npx babel-node 12-main.js
+    { engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
+    2
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
 
-{ engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
-2
-╭─green@greenhouse 
-╰─➤  
-```
+### 
