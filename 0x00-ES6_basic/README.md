@@ -289,3 +289,54 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     }
     ```
 - Example Execution: ([`7-main.js`](./7-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 7-main.js 
+    import getBudgetObject from './7-getBudgetObject.js';
+
+    console.log(getBudgetObject(400, 700, 900));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 7-main.js                                                       
+
+    { income: 400, gdp: 700, capita: 900 }
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+### 8. No need to create empty objects before adding in properties 
+- File: [`8-getBudgetCurrentYear.js`](./8-getBudgetCurrentYear.js)
+- Tasks:
+    - Rewrite the `getBudgetForCurrentYear` function.
+    - Use ES6 computed property names on the `budget` object
+        ```
+        function getCurrentYear() {
+        const date = new Date();
+        return date.getFullYear();
+        }
+
+        export default function getBudgetForCurrentYear(income, gdp, capita) {
+        const budget = {};
+
+        budget[`income-${getCurrentYear()}`] = income;
+        budget[`gdp-${getCurrentYear()}`] = gdp;
+        budget[`capita-${getCurrentYear()}`] = capita;
+
+        return budget;
+        }
+        ```
+- Example Execution: ([`8-main.js`](./8-main.js))
+    ```
+    ╭─green@greenhouse
+    ╰─➤  cat 8-main.js 
+    import getBudgetForCurrentYear from './8-getBudgetCurrentYear.js';
+
+    console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 8-main.js 
+
+    { 'income-2024': 2100, 'gdp-2024': 5200, 'capita-2024': 1090 }
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+### 9. ES6 method properties 
