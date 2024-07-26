@@ -380,3 +380,27 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ```
 
 ### 10. For...of Loops 
+- File: [`10-loops.js`](./10-loops.js)
+- Task: Rewrite the function `appendToEachArrayValue` 
+    - Use ES6’s for...of operator
+    - *Note: var is not ES6-friendly.*
+        ```
+        export default function appendToEachArrayValue(array, appendString) {
+        for (var idx in array) {
+            var value = array[idx];
+            array[idx] = appendString + value;
+        }
+
+        return array;
+        }
+        ```
+- Example Execution: ([`10-main.js`](./10-main.js))
+```
+╭─green@greenhouse 
+╰─➤  cat 10-main.js 
+import appendToEachArrayValue from './10-loops.js';
+
+console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+╭─green@greenhouse 
+╰─➤  
+```
