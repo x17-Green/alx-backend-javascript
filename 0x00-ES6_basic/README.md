@@ -404,3 +404,40 @@ console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctl
 ╭─green@greenhouse 
 ╰─➤  
 ```
+
+### 11. Iterator 
+- File: [`11-createEmployeesObject.js`](./11-createEmployeesObject.js)
+- Task: Write a function named `createEmployeesObject`
+    - That receives two arguments:
+        - `departmentName` (String)
+        - `employees` (Array of Strings)
+            ```
+            export default function createEmployeesObject(departmentName, employees) {
+
+            }
+            ```
+    - The function should return an object with the following format:
+        ```
+        {
+            $departmentName: [
+                $employees,
+            ],
+        }
+        ```
+- Example Execution: ([`11-main.js`](./11-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 11-main.js 
+    import createEmployeesObject from './11-createEmployeesObject.js';
+
+    console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 11-main.js                                                          
+
+    { Software: [ 'Bob', 'Sylvie' ] }
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+
+### 12. Let's create a report object 
