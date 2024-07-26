@@ -179,35 +179,65 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ╰─➤  
     ```
 
-    ### 4. Rest parameter syntax for functions 
-    - File: [`4-rest-parameter.js`](./4-rest-parameter.js)
-    - Task:
-    - Create a function that takes an array of numbers
-        - It returns the sum of all the numbers in the array.
-            ```
-            export default function returnHowManyArguments() {
-
-            }
-            ```
-        - Example:
-            ```
-            > returnHowManyArguments("Hello", "Holberton", 2020);
-            3
-            >
-            ```
-    - Example Execution: ([`4-main.js`](./4-main.js))
+### 4. Rest parameter syntax for functions 
+- File: [`4-rest-parameter.js`](./4-rest-parameter.js)
+- Task:
+- Create a function that takes an array of numbers
+    - It returns the sum of all the numbers in the array.
         ```
-        ╭─green@greenhouse 
-        ╰─➤  cat 4-main.js 
-        import returnHowManyArguments from './4-rest-parameter.js';
+        export default function returnHowManyArguments() {
 
-        console.log(returnHowManyArguments("one"));
-        console.log(returnHowManyArguments("one", "two", 3, "4th"));
-        ╭─green@greenhouse 
-        ╰─➤  npm run dev 4-main.js
-
-        1
-        4
-        ╭─green@greenhouse 
-        ╰─➤  
+        }
         ```
+    - Example:
+        ```
+        > returnHowManyArguments("Hello", "Holberton", 2020);
+        3
+        >
+        ```
+- Example Execution: ([`4-main.js`](./4-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 4-main.js 
+    import returnHowManyArguments from './4-rest-parameter.js';
+
+    console.log(returnHowManyArguments("one"));
+    console.log(returnHowManyArguments("one", "two", 3, "4th"));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 4-main.js
+
+    1
+    4
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+### 5. The wonders of spread syntax
+- File: [`5-spread-operator.js`](./5-spread-operator.js)
+- Task: Concatenate 2 arrays and each character of a string by modifying the function below. 
+    - Using spread syntax,
+        ```
+        export default function concatArrays(array1, array2, string) {
+        }
+        ```
+- Example Execution: ([`5-main.js`](./5-main.js))
+    ```
+    ╭─green@greenhouse
+    ╰─➤  cat 5-spread-operator.js 
+    export default function concatArrays(array1, array2, string) {
+    return [...array1, ...array2, ...string];
+    }
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 5-main.js
+
+    > 0x01-es6_promise@1.0.0 dev
+    > npx babel-node 5-main.js
+
+    [
+    'a', 'b', 'c',
+    'd', 'H', 'e',
+    'l', 'l', 'o'
+    ]
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
