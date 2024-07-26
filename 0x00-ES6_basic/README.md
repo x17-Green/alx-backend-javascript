@@ -1,5 +1,5 @@
 # 0x00. ES6 Basics 
-## Description
+### Description
 This project is about learning the basics of ES6
 
 
@@ -601,3 +601,4 @@ Bob | Jane | Sylvie
 ╭─green@greenhouse 
 ╰─➤  
 ```
+
