@@ -536,3 +536,68 @@ console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctl
     ╭─green@greenhouse 
     ╰─➤  
     ```
+
+### 14. Iterate through object
+- File: [`101-iterateThroughObject.js`](./101-iterateThroughObject.js)
+- Tasks: 
+    - Write a function named `iterateThroughObject`
+    - Function parameter `reportWithIterator` is return value from `createIteratorObject`.
+        ```
+        export default function iterateThroughObject(reportWithIterator) {
+
+        }
+        ```
+    - It should return every employee name in a string, separated by `|`
+        ```
+        {
+        allEmployees: {
+            engineering: [
+                'John Doe',
+                'Guillaume Salva',
+            ],
+        },
+        ...
+        };
+        ```
+        - Should return `John Doe | Guillaume Salva`
+        - *Reminder - the functions will be imported by the test suite.*
+
+- Full Example:
+    ```
+    > employees = {
+        ...createEmployeesObject('engineering', engineering),
+        ...createEmployeesObject('design', design),
+        };
+    >
+    > const report = createReportObject(employees);
+    > const reportWithIterator = createIteratorObject(report);
+    > iterateThroughObject(reportWithIterator)
+    'John Doe | Guillaume Salva | Kanye East | Jay Li'
+    > 
+    ```
+- Execution: ([`101-main.js`](./101-main.js))
+```
+╭─green@greenhouse 
+╰─➤  cat 101-main.js 
+import createEmployeesObject from "./11-createEmployeesObject.js";
+import createReportObject from './12-createReportObject.js';
+import createIteratorObject from './100-createIteratorObject.js';
+import iterateThroughObject from './101-iterateThroughObject.js';
+
+
+const employees = {
+    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+    ...createEmployeesObject('marketing', ['Sylvie'])
+};
+
+const report = createReportObject(employees);
+const reportWithIterator = createIteratorObject(report);
+
+console.log(iterateThroughObject(reportWithIterator));
+╭─green@greenhouse 
+╰─➤  npm run dev 101-main.js                     
+
+Bob | Jane | Sylvie
+╭─green@greenhouse 
+╰─➤  
+```
