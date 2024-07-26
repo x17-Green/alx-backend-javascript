@@ -441,3 +441,58 @@ console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctl
 
 
 ### 12. Let's create a report object 
+- File: [`12-createReportObject.js`](./12-createReportObject.js)
+- Tasks: 
+    - Write a function named `createReportObject`
+        - With a parameter `employeesList`
+        - The parameter should return the value of previous function `createEmployeesObject`.
+            ```
+            export default function createReportObject(employeesList) {
+
+            }
+            ```
+    - `createReportObject` returns an object
+        - Containing key `allEmployees` 
+        - And a method property called `getNumberOfDepartments`.
+    - `allEmployees` is a key 
+        - Maps to object containing the department name
+        - A list of employees in the department
+    - The method property receives `employeesList`
+        - Returns the number of departments
+            - *Suggest thinking back to ES6 method property syntax*
+                ```
+                {
+                allEmployees: {
+                    engineering: [
+                        'Guillaume Salva',
+                        'Marshall Green',
+                    ],
+                },
+                };
+                ```
+- Example Execution: ([`12-main.js`](./12-main.js))
+```
+╭─green@greenhouse
+╰─➤  cat 12-main.js 
+import createEmployeesObject from './11-createEmployeesObject.js';
+import createReportObject from './12-createReportObject.js';
+
+const employees = {
+    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+    ...createEmployeesObject('marketing', ['Sylvie'])
+};      
+
+const report = createReportObject(employees);
+console.log(report.allEmployees);
+console.log(report.getNumberOfDepartments(report.allEmployees));
+╭─green@greenhouse 
+╰─➤  npm run dev 12-main.js 
+
+> 0x01-es6_promise@1.0.0 dev
+> npx babel-node 12-main.js
+
+{ engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
+2
+╭─green@greenhouse 
+╰─➤  
+```
