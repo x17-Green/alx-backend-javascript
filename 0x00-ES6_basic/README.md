@@ -494,4 +494,45 @@ console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctl
     ╰─➤  
     ```
 
-### 
+### 13. Iterating through report objects 
+- File: [`100-createIteratorObject.js`](./100-createIteratorObject.js)
+- Tasks: 
+    - Write a function named `createIteratorObject`
+    - That takes into argument a report Object
+    - Created with the previous function `createReportObject`
+        - This function will return an iterator to go through every employee in every department.
+            ```
+            export default function createIteratorObject(report) {
+
+            }
+            ```
+- Example Execution: ([`100-main.js`](./100-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 100-main.js 
+    import createIteratorObject from "./100-createIteratorObject.js";
+
+    import createEmployeesObject from './11-createEmployeesObject.js';
+    import createReportObject from './12-createReportObject.js';
+
+    const employees = {
+        ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+        ...createEmployeesObject('marketing', ['Sylvie'])
+    };
+
+    const report = createReportObject(employees);
+
+    const reportWithIterator = createIteratorObject(report);
+
+    for (const item of reportWithIterator) {
+        console.log(item);
+    }
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 100-main.js 
+
+    Bob
+    Jane
+    Sylvie
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
