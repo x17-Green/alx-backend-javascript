@@ -147,18 +147,18 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - Task:
     - Condense the internals of the following function to 1 line - 
         - Cannot change name of each function/variable. 
-        ```
-        export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
-        if (expansion1989 === undefined) {
-            expansion1989 = 89;
-        }
+            ```
+            export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
+            if (expansion1989 === undefined) {
+                expansion1989 = 89;
+            }
 
-        if (expansion2019 === undefined) {
-            expansion2019 = 19;
-        }
-        return initialNumber + expansion1989 + expansion2019;
-        }
-        ```
+            if (expansion2019 === undefined) {
+                expansion2019 = 19;
+            }
+            return initialNumber + expansion1989 + expansion2019;
+            }
+            ```
         - *Hint: The key here to define default parameter values for the function parameters.*
 - Example Execution: ([`3-main.js`](./3-main.js))
     ```
@@ -340,3 +340,43 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ```
 
 ### 9. ES6 method properties 
+- File: [`9-getFullBudget.js`](./9-getFullBudget.js)
+- Task: Rewrite `getFullBudgetObject` to use ES6 method properties in the `fullBudget` object
+    ```
+    import getBudgetObject from './7-getBudgetObject.js';
+
+    export default function getFullBudgetObject(income, gdp, capita) {
+    const budget = getBudgetObject(income, gdp, capita);
+    const fullBudget = {
+        ...budget,
+        getIncomeInDollars: function (income) {
+        return `$${income}`;
+        },
+        getIncomeInEuros: function (income) {
+        return `${income} euros`;
+        },
+    };
+
+    return fullBudget;
+    }
+    ```
+- Example Execution: ([`9-main.js`](./9-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 9-main.js 
+    import getFullBudgetObject from './9-getFullBudget.js';
+
+    const fullBudget = getFullBudgetObject(20, 50, 10);
+
+    console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+    console.log(fullBudget.getIncomeInEuros(fullBudget.income));
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 9-main.js                                                                              1 ↵
+
+    $20
+    20 euros
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
+
+### 10. For...of Loops 
