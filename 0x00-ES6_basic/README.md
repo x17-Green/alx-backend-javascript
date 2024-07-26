@@ -276,3 +276,16 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ```
 ### 7. Object property value shorthand syntax 
 - File: [`7-getBudgetObject.js`](./7-getBudgetObject.js)
+- Task: Modify the following function’s `budget` object to simply use the keyname instead.
+    ```
+    export default function getBudgetObject(income, gdp, capita) {
+    const budget = {
+        income: income,
+        gdp: gdp,
+        capita: capita,
+    };
+
+    return budget;
+    }
+    ```
+- Example Execution: ([`7-main.js`](./7-main.js))
