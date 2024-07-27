@@ -57,3 +57,28 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ╭─green@greenhouse 
     ╰─➤  
     ```
+
+### 1. Let's make some classrooms
+- File: [`1-make_classrooms.js`](./1-make_classrooms.js "1-make_classrooms.js")
+- Task: Import the `ClassRoom` class from `0-classroom.js`
+	- Implement a function named `initializeRooms`
+	- Should return an array of 3 `ClassRoom` objects
+		- *With sizes 19, 20, and 34 (in this order)*
+- Example Execution: ([`1-main.js`](./1-main.js))
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 1-main.js
+    import initializeRooms from './1-make_classrooms.js';
+    
+    console.log(initializeRooms());
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 1-main.js                
+
+    [
+        ClassRoom { _maxStudentsSize: 19 },
+        ClassRoom { _maxStudentsSize: 20 },
+        ClassRoom { _maxStudentsSize: 34 }
+    ]
+    ╭─green@greenhouse
+    ╰─➤  
+    ```
