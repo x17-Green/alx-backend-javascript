@@ -36,3 +36,20 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Tasks, Files & Description
 
+### 0. You used to attend a place like this at some point
+- File: [`0-classroom.js`](./0-classroom.js "0-classroom.js")
+- Task: Implement a class named `ClassRoom`:
+	- Prototype: `export default class ClassRoom`
+	- Should accept one attribute named `maxStudentsSize`
+	- Assigned to `_maxStudentsSize`
+- Example Execution: ([`0-main.js`](0-main.js "0-main.js"))
+```
+╭─green@greenhouse 
+╰─➤  cat 0-main.js  
+import ClassRoom from "./0-classroom.js";
+
+const room = new ClassRoom(10);
+console.log(room._maxStudentsSize)
+╭─green@greenhouse 
+╰─➤  
+```
