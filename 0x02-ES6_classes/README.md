@@ -43,13 +43,17 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 	- Should accept one attribute named `maxStudentsSize`
 	- Assigned to `_maxStudentsSize`
 - Example Execution: ([`0-main.js`](0-main.js "0-main.js"))
-```
-╭─green@greenhouse 
-╰─➤  cat 0-main.js  
-import ClassRoom from "./0-classroom.js";
+    ```
+    ╭─green@greenhouse 
+    ╰─➤  cat 0-main.js  
+    import ClassRoom from "./0-classroom.js";
 
-const room = new ClassRoom(10);
-console.log(room._maxStudentsSize)
-╭─green@greenhouse 
-╰─➤  
-```
+    const room = new ClassRoom(10);
+    console.log(room._maxStudentsSize)
+    ╭─green@greenhouse 
+    ╰─➤  npm run dev 0-main.js          
+
+    10
+    ╭─green@greenhouse 
+    ╰─➤  
+    ```
