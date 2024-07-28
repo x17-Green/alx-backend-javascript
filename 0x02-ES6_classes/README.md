@@ -146,10 +146,10 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     ╰─➤  cat 3-main.js 
     import Currency from "./3-currency.js";
 
-    const dollar = new Currency('$', 'Dollars');
-    console.log(dollar.displayFullCurrency());
+    const naira = new Currency('NGN', '\u20A6', 'Naira');
+    console.log(naira.displayFullCurrency());
     ╭─green@greenhouse 
-    ╰─➤  npm run dev 3-main.js                                                                1 ↵
+    ╰─➤  npm run dev 3-main.js
 
     Naira (NGN) [₦]
     ╭─green@greenhouse 
@@ -180,7 +180,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     import Pricing from './4-pricing.js';
     import Currency from './3-currency.js';
 
-    const p = new Pricing(100, new Currency("EUR", "Euro"))
+    const p = new Pricing(100, new Currency("NGN", '\u20A6', "Naira"))
     console.log(p);
     console.log(p.displayFullPrice());
     ╭─green@greenhouse 
@@ -191,7 +191,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
     _currency: Currency { _name: 'Naira', _code: 'NGN', _sign: '₦' }
     }
     ₦ 100 Naira (NGN)
-    ╭─green@greenhouse ~/Documents/git_dir/alx-specialization/alx-backend-javascript/0x02-ES6_classes  ‹main*› 
+    ╭─green@greenhouse 
     ╰─➤  
     ```
 
