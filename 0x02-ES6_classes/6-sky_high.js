@@ -1,5 +1,7 @@
+// 6-sky_high.js
+
 // Import the Building class from 5-building.js
-import Building from './5-building.js';
+import Building from './5-building';
 
 // Implement a class named SkyHighBuilding that extends from Building
 class SkyHighBuilding extends Building {
