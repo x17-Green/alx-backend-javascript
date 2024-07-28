@@ -26,7 +26,7 @@ class SkyHighBuilding extends Building {
   // Override the evacuationWarningMessage method
   evacuationWarningMessage() {
     // Return the evacuation warning message with the number of floors
-    return `Evacuate slowly the ${this._floors} floor`;
+    return `Evacuate slowly the ${this._floors} floors`;
   }
 }
 
