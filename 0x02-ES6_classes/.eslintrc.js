@@ -26,7 +26,9 @@ module.exports = {
             'WithStatement',
         ],
         'indent': ['error', 2],
-        'quotes': ['error', 'single']
+        'quotes': ['error', 'single'],
+        'no-underscore-dangle': 'off',
+        'max-classes-per-file': 'off'
     },
     overrides:[
         {
