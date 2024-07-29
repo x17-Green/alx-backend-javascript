@@ -29,7 +29,7 @@ function getListStudents() {
       location: 'Columbia',
     },
     {
-      id: 3,
+      id: 5,
       firstName: 'Guillaume',
       location: 'San Francisco',
     },
@@ -38,4 +38,4 @@ function getListStudents() {
   return students;
 }
 
-console.log(getListStudents());
+export default getListStudents;
