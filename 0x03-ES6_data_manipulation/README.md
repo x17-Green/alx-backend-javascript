@@ -3,7 +3,7 @@
 ### Description
 This project is about data manipulation in JavaScript using ES6 features.
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/6ab7bec4727cb5c91257.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240729%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240729T085400Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=35dbcc9c845fa924c0e8f9d284abb57c8638473636acbf2d1bdaa3c18f595b46 "meme")
+![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/6ab7bec4727cb5c91257.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240729%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240729T085400Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=35dbcc9c845fa924c0e8f9d284abb57c8638473636acbf2d1bdaa3c18f595b46)
 
 
 ## Resources
