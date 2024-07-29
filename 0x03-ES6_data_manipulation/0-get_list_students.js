@@ -30,7 +30,7 @@ function getListStudents() {
     },
     {
       id: 5,
-      firstName: 'Guillaume',
+      firstName: 'Serena',
       location: 'San Francisco',
     },
   ];
