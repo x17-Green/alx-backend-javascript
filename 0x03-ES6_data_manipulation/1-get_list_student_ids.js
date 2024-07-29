@@ -3,10 +3,10 @@
 /**
  * Returns a list of student IDs from an array of student objects.
  *
- * @param {Array<Object>} students
+ * @param {Array<Object>} students 
  * - An array of student objects, each with an 'id' property.
- * @returns {Array<number>}
- * - An array of student IDs.
+ * @returns {Array<number>} 
+ * - An array of student IDs. 
  * - If the input is not an array, an empty array is returned.
  *
  * @example
@@ -21,7 +21,7 @@
 
 function getListStudentIds(students) {
   if (!Array.isArray(students)) {
-    return new TypeError(Error, "Must be a student function");
+    return [];
   }
   return students.map((student) => student.id);
 }
