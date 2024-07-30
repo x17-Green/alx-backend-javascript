@@ -17,8 +17,8 @@
  */
 
 function getStudentIdsSum(students) {
-  if (!(students instanceof Array)) {
-    throw new TypeError('Argument must be an array');
+  if (!(Array.isArray(students))) {
+    return [];
   }
   return students.reduce((acc, students) => acc + students.id, 0);
 }
