@@ -12,16 +12,15 @@
  * console.log(cleaned); // Output: "world-foo"
  */
 function cleanSet(set, startString) {
-  const filteredValues = [];
-  if (startString == '' || typeof startString !== 'string') {
-    return '';
-  }
-  for (const value of set) {
-    if (typeof value === 'string' && value.startsWith(startString)) {
-      filteredValues.push(value.substring(startString.length));
-    }
-  }
-  return filteredValues.join('-');
-}
-
-export default cleanSet;
+    if (startString === '' || typeof startString !== 'string') return '';
+  
+    const filteredStrings = [];
+    set.forEach((s) => {
+      if (typeof s === 'string' && s.startsWith(startString)) {
+        filteredStrings.push(s.slice(startString.length));
+      }
+    });
+    return filteredStrings.join('-');
+  };
+  
+  export default cleanSet;
