@@ -15,16 +15,13 @@
  * console.log(cleanedSet); // Output: "world-universe"
  */
 function cleanSet(set, startString) {
-  if (startString === '') {
-    return '';
-  }
-  const filteredSet = new Set();
+  const filteredValues = [];
   for (const value of set) {
     if (typeof value === 'string' && value.startsWith(startString)) {
-      filteredSet.add(value.substring(startString.length));
+      filteredValues.push(value.substring(startString.length));
     }
   }
-  return Array.from(filteredSet).join('-');
+  return filteredValues.join('-');
 }
 
 export default cleanSet;
