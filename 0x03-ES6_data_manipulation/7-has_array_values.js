@@ -17,10 +17,10 @@
  * console.log(hasValuesFromArray(emptySet, myArray)); // Output: false
  */
 function hasValuesFromArray(set, array) {
-//   if (!Array.isArray(array)) {
-//     throw new Error('Input must be an array');
-//   }
-  return array.some((value) => set.has(value));
+  if (!Array.isArray(array)) {
+    throw new Error('Input must be an array');
+  }
+  return array.every((value) => set.has(value));
 }
 
 export default hasValuesFromArray;
