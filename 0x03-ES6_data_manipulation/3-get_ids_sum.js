@@ -17,10 +17,10 @@
  */
 
 function getStudentIdsSum(students) {
-    if (!(students instanceof Array)) {
-        throw new TypeError('Argument must be an array');
-    }
-    return students.reduce((acc, student) => acc + student.id, 0);
+  if (!(students instanceof Array)) {
+    throw new TypeError('Argument must be an array');
+  }
+  return students.reduce((acc, students) => acc + students.id, 0);
 }
 
 export default getStudentIdsSum;
