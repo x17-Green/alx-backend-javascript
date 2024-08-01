@@ -1,14 +1,15 @@
 {
-  "name": "0x04-typescript",
+  "name": "task_4",
   "version": "1.0.0",
-  "description": "This project is about typescript",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --open",
     "build": "webpack",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Okoyen Ebisine Precious",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
