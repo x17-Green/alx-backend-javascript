@@ -46,3 +46,8 @@ logs/
 
 # Node Modules
 node_modules
+
+
+# Nuxt.js build / Generate output
+.nuxt
+dist

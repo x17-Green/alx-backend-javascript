@@ -1,4 +1,4 @@
-# ALX Specialization Project Repository
+# ALX Backend Javascript Specialization Project Repository
 ## Project Categories
 | Project                                            | Description                                            |
 | -------------------------------------------------- | ------------------------------------------------------ |
